@@ -17,7 +17,11 @@
     "clean": "rm -rf build && mkdir build",
     "build-src": "babel -d ./build ./src -s",
     "build": "npm run migrate:heroku && npm run clean && npm run build-src"
-  },  
+  }, 
+  "engines": {
+    "node": ">= 6.9.4",
+    "npm": ">= 4.4.0"
+  }, 
   "nyc": {
     "exclude": [
       "src/database",
