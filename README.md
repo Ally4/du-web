@@ -1,90 +1,70 @@
-# task-force-awesomity-backend-challenge
-The Backend challenge at Awesomity
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Badges
+## Available Scripts
 
-[![Build Status](https://travis-ci.org/Ally4/task-force-awesomity-backend-challenge.svg?branch=develop)](https://travis-ci.org/Ally4/task-force-awesomity-backend-challenge) [![Coverage Status](https://coveralls.io/repos/github/Ally4/task-force-awesomity-backend-challenge/badge.svg?branch=develop)](https://coveralls.io/github/Ally4/task-force-awesomity-backend-challenge?branch=develop)
+In the project directory, you can run:
 
-## Features
+### `npm start`
 
-- All normal users get the landing page
-- The user can register
-- The user can signin
-- The user can create todo
-- The user can update todo
-- The user can delete todo
-- The user can get all todos
-- The user can get a todo
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
+### `npm test`
 
-#### Accessing the hosted environment
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- [The heroku hosting](https://awesomity-task-force-challenge.herokuapp.com/)
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Development tools
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
- - NodeJs
- - Express JS
- - Mocha
- - Chai
- - Babel
- - Postgres(Sequelize)
- - JsonWebToken
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-  
-### Endpoints and their caracteristics
+### `npm run eject`
 
-| VERBS  | ENDPOINTS                        | STATUS   | DESCRIPTION                       |
-|--------|----------------------------------|----------|-----------------------------------|
-| GET    | /                                |  200 OK  | Welcome message                   |
-| GET    | /api/v1/todo/get-todo            |  200 OK  | Getting a todo                    |
-| GET    | /api/v1/todo/get-todos           |  200 OK  | Getting all todos                 |
-| PATCH  | /api/v1/todo/update-todo         |  200 OK  | Updating a todo                   |
-| POST   | /api/v1/todo/create-todo         |  200 OK  | Creating a todo                   |
-| POST   | /api/v1/auth/login               |  200 OK  | Login in the system               |
-| POST   | /api/v1/auth/register            |  201 OK  | Register in the system            |
-| DELETE | /api/v1/todo/delete-todo         |  200 OK  | Delete a todo                     |
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-### Other Tools
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Other tools and technologies used in development of this application are;
-- Hoster: [Heroku](http://heroku.com).
-- Compiler: [Babel](https://babeljs.io/).
-- Integrate: [TravisCI](https://travis-ci.org/github/Ally4/task-force-awesomity-backend-challenge).
-- Integrate: [Coveralls](https://coveralls.io/github/Ally4/task-force-awesomity-backend-challenge).
-- API checking environment: [Postman](https://www.getpostman.com).
-- Programming language: [JavaScript(ES6)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/).
-- RunTime environment: [NodeJS](https://nodejs.org/en/).
-- Framework: [ExpressJS](http://expressjs.com/).
-- Text Editor: [VSCode](https://code.visualstudio.com).
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-### Getting Started
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-1. Follow the instruction to start the project
+## Learn More
 
-- Clone this project on your machine , by running this command on in your command line or Terminal:
- ```
-git clone https://github.com/Ally4/task-force-awesomity-backend-challenge.git
- ```
- - Install the required dependencies found in package.json by running this command:
- ```
-npm install
- ```
- - And then to start running  this project on your computer , run :
- ```
-npm run dev
- ```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
- - Check the endpoint in postman on  :
- ```
-http://localhost:1234
- ```
- - See the test, run command:
- ```
-npm run test
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-#### Made with :heart: by Ally
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

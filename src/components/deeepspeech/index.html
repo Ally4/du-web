@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Recorder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- Full Page Intro -->
+    <div class="view">
+
+        <div class="mask gradient-card align-items-center">
+            <!-- Content -->
+            <div class="container d-flex justify-content-center">
+                <div id="mobile-box">
+                    <h3 class="my-5 h5 text-center" style="color:rgb(235, 232, 234)">Simple Recorder <i
+                            class="bi bi-file-play-fill"></i>
+                    </h3>
+                    <div id="controls">
+                        <button id="recordButton" type="button" class="btn btn-primary btn-sm"
+                            data-bs-toggle="button">Record</button>
+                        <button id="stopButton" type="button" class="btn btn-danger btn-sm" disabled>Finish</button>
+                    </div>
+                    <div id="formats">Format: start recording to see sample rate</div>
+                    <div style="visibility: hidden;" id="displayContent">
+                        <div class="card">
+                            <div>
+                                <img class="card-img-top"
+                                    src="./images/b4efb6c6682b2a808631bf8fbd96d015-sound-wave-icon-by-vexels.png"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="h5 font-weight-bold"><a id="audioLink" href="">Dj Flam</a></h5>
+                                <div id="recordedArea"></div>
+                                <div class="row">
+                                    <br>
+                                </div>
+                                <button id="Transilate" type="button" class="btn btn-primary btn-sm"
+                                    data-bs-toggle="button">
+                                    Transilate
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <br>
+                        </div>
+                    </div>
+                    <div style="visibility: hidden;" id="transilatedAudio">
+                        <div class="card">
+                            <div class="card-body">
+                                <figure class="text-center">
+                                    <blockquote class="blockquote">
+                                        <p>A well-known quote, contained in a blockquote element.</p>
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer">
+                                        Someone famous in <cite title="Source Title">Source Title</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+        </div>
+
+        <div class="overlay show"></div>
+        <div class="spanner show">
+            <div class="loader"></div>
+            <p>Please be patient, we are setting up everthing for you. {.. <i
+                class="bi bi-emoji-heart-eyes"></i> ..}</p>
+        </div>
+        
+    </div>
+    <script src="./node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="js/recorder.js"></script>
+    <script src="js/app.js"></script>
+ 
+</body>
+
+</html>

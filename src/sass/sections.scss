@@ -1,0 +1,1317 @@
+
+.about {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(
+      105deg,
+      rgba(#0e9fd8, 0.4) 0%,
+      rgba(hsl(197, 88%, 45%), 0.4) 40%,
+      transparent 60%
+    ),
+    url(../assets/digital1.jpeg);
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  
+
+
+
+
+
+    &__description {
+      margin-top: 100px;
+
+      // &--parapic {
+      //   background-color: #e5e7eba8;
+      //   display: flex;
+      //   justify-content: space-between;
+      //   padding:20px;
+      // }
+  
+      &--spinner {
+        height: 150px;
+        width: 150px;
+        margin-top: -180px;
+        z-index: 100000;
+        animation: App-logo-spin infinite 20s linear;
+      }
+
+      // &--pic{
+      //   padding-right: 20px;
+      //   padding-top: 35px;
+      //   width: 400px;
+      //   height: 400px;
+      //   border-radius: 5px 5px 5px 5px;
+      // }
+    }
+  
+    &__description--paragraph {
+      position: relative;
+      // color: rgb(68, 68, 68);
+      font-size: 30px;
+      text-align: center;
+      // border: 3px solid #d1d5db;
+      border-top: none;
+      border-left: none;
+      // box-shadow: 1px 5px 6px #ccc;
+      width: 50%;
+      padding: 5px;
+      margin-top: 50px;
+      margin-left: 55px;
+      border-radius: 5px;
+      z-index: 10;
+    }
+  }
+  
+
+
+
+
+
+
+
+  .title {
+      color: rgb(68, 68, 68);
+      text-align: center;
+      font-size: 35px;
+      font-weight: bolder;
+  }
+
+.title:hover {
+  color:#5aa1bb;
+  transition: .4s ease-out;
+  transform: scale(1.05) translateY(-.5rem);
+}
+
+
+
+  .title1 {
+      color: rgb(68, 68, 68);
+      text-align: center;
+      font-size: 25px;
+  }
+
+  .title2 {
+      color: rgb(68, 68, 68);
+      text-align: center;
+      font-size: 15px;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////    navigation bar
+  
+
+
+
+  .navigation {
+    &__checkbox {
+      display: none;
+    }
+  
+    &__button {
+      background-color: #0e9fd8c4;
+      height: 7rem;
+      width: 7rem;
+      position: fixed;
+      top: 6rem;
+      right: 6rem;
+      border-radius: 50%;
+      z-index: 2000;
+      // box-shadow: 0 1rem 3rem rgba(black, 0.1);
+      text-align: center;
+      cursor: pointer;
+    }
+  
+    &__background {
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+      position: fixed;
+      top: 6.5rem;
+      right: 6.5rem;
+      background-image: radial-gradient(
+        #0e9fd873,
+        #0e9fd873,
+      );
+      z-index: 1000;
+      transition: transform 0.8s cubic-bezier(0,0,0,0);
+    }
+  
+    &__nav {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1500;
+  
+      opacity: 0;
+      width: 0;
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  
+    &__list {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      list-style: none;
+      text-align: center;
+    }
+  
+    &__item {
+      margin: 1rem;
+    }
+  
+    &__link {
+      &:link,
+      &:visited {
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-image: linear-gradient(
+          120deg,
+          transparent 0%,
+          transparent 50%,
+          white 50%
+        );
+        background-size: 240%;
+        transition: all 0.4s;
+  
+        // span {
+        //   margin-right: 1.5rem;
+        //   display: inline-block;
+        // }
+      }
+  
+      &:hover,
+      &:active {
+        background-position: 100%;
+        color: #0e9fd8c4;
+        transform: translateX(1rem);
+      }
+    }
+  
+    // FUNCTIONALITY
+  
+    &__checkbox:checked ~ &__background {
+      transform: scale(80);
+    }
+  
+    &__checkbox:checked ~ &__nav {
+      opacity: 1;
+      width: 100%; ///////////////////////////////////////////////////////////////////////////////it was on 100%, I'm working on it to place the list under the button
+    }
+  
+    // ICON
+  
+    &__icon {
+      position: relative;
+      margin-top: 3.5rem;
+  
+      &,
+      &::before,
+      &::after {
+        width: 3rem;
+        height: 2px;
+        background-color: #c8c8c8c8;
+        display: inline-block;
+      }
+  
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+      }
+  
+      &::before {
+        top: -0.8rem;
+      }
+  
+      &::after {
+        top: 0.8rem;
+      }
+    }
+  
+    &__button:hover &__icon::before {
+      top: -1rem;
+    }
+  
+    &__button:hover &__icon::after {
+      top: 1rem;
+    }
+  
+    &__checkbox:checked + &__button &__icon {
+      background-color: transparent; // we are putting transparent because if we remove it, it will affect the before and after
+      transition: all 0.4s;
+    }
+  
+    &__checkbox:checked + &__button &__icon::before {
+      top: 0;
+      transform: rotate(215deg);
+      transition: all 0.8s;
+    }
+  
+    &__checkbox:checked + &__button &__icon::after {
+      top: 0;
+      transform: rotate(-215deg);
+      transition: all 0.8s;
+    }
+  }
+  
+  // transform-origin helps in the dermine from which point the rotation will start from
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////    footer
+  
+  .footer {
+    background-color: black;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: -50px;
+    clear: both;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  
+    &__name {
+      color: white;
+      font-size: 2rem;
+    }
+  
+    &__copyright {
+      color: white;
+      font-size: 2rem;
+    }
+  
+    &__icons {
+      display: flex;
+      justify-content: space-evenly;
+  
+      .icons {
+        color: white;
+        svg {
+          margin-left: 60px;
+          font-size: 40px;
+        }
+      }
+    }
+  }
+  
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////the container
+
+.container {
+  // max-width: 1170px;
+  padding: 0% 15% 0% 15%;
+}
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////projects
+
+
+
+.projects {
+  min-height: 70vh;
+  background-color: white;
+  position: relative;
+
+
+  &__description__background {
+    width: 150px;
+    height: 150px;
+  }
+
+  .robot {
+    position: absolute;
+    opacity: .3;
+    right: 50px;
+    left: 150px;
+    z-index: 0;
+  }
+  .robot1 {
+    position: absolute;
+    opacity: .3;
+    width: 120px;
+    height: 120px;
+    bottom: 700px;
+    left: 600px;
+    z-index: 0;
+  }
+  .robot2 {
+    position: absolute;
+    opacity: .3;
+    bottom: 50px;
+    left: 180px;
+    z-index: 0;
+  }
+  .robot4 {
+    position: absolute;
+    opacity: .3;
+    width: 120px;
+    height: 120px;
+    top: 700px;
+    left: 900px;
+    z-index: 0;
+  }
+  .sound1 {
+    position: absolute;
+    opacity: .3;
+    width: 120px;
+    height: 120px;
+    // top: 300px;
+    left: 900px;
+    z-index: 0;
+  }
+
+  .robot5 {
+    position: absolute;
+    opacity: .3;
+    width: 120px;
+    height: 120px;
+    top: 500px;
+    left: 600px;
+    z-index: 0;
+  }
+
+  .robot6 {
+    position: absolute;
+    opacity: .3;
+    width: 120px;
+    height: 120px;
+    top: 500px;
+    left: 200px;
+    z-index: 0;
+  }
+
+  .robot3 {
+    position: absolute;
+    opacity: .3;
+    width: 120px;
+    height: 120px;
+    top: 900px;
+    left: 700px;
+    z-index: 0;
+  }
+
+
+  &__description__body {
+    background-color: #0761851e;
+    // position: absolute;
+    // z-index: 15;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 400px;
+    min-height: 200px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    padding: 20px;
+    // margin: 100px 0px 100px 250px;
+
+    & u {
+      text-align: center;
+      font-weight: bolder;
+      font-size: 2rem;
+      color: #0e9fd8;
+    }
+
+    & p {
+      font-size: 2rem;
+      font-weight: bold;
+      color: rgb(68, 68, 68);
+    }
+  }
+
+  &__description__body--1 {
+    background-color: #0761851e;
+    border-radius: 5px;
+    // position: absolute;
+    font-size: 20px;
+    width: 400px;
+    min-height: 200px;
+    // z-index: 15;
+    margin-top: -250px;
+    margin-left: 567px;
+    margin-bottom: 20px;
+    padding: 20px;
+    // margin: 100px 0px 750px 0px;
+
+    & u {
+      text-align: center;
+      font-weight: bolder;
+      font-size: 2rem;
+      color: #0e9fd8;
+    }
+
+    & p {
+      font-size: 2rem;
+      font-weight: bold;
+      color: rgb(68, 68, 68);
+      
+    }
+  }
+
+  // &__description__body--2 {
+  //   background-color: #0761851e;
+  //   position: absolute;
+  //   z-index: 15;
+  //   border-radius: 5px;
+  //   font-size: 20px;
+  //   width: 250px;
+  //   margin-top: 300px;
+  //   margin-left: 670px;
+  //   // margin: 250px 0px 250px 0px;
+
+  //   & h1 {
+  //     text-align: center;
+  //   }
+
+  //   & p {
+  //   }
+  // }
+
+  // &__description__body--3 {
+  //   background-color: #0761851e;
+  //   border-radius: 5px;
+  //   position: absolute;
+  //   font-size: 20px;
+  //   width: 250px;
+  //   z-index: 15;
+
+  //   margin-top: 300px;
+  //   margin-left: 0px;
+  //   // margin: 250px 0px 100px 250px;
+
+  //   & h1 {
+  //     text-align: center;
+  //   }
+
+  //   & p {
+  //   }
+  // }
+
+  // &__description__body--4 {
+  //   background-color: #f9fafbb7;
+  //   position: absolute;
+  //   z-index: 15;
+  //   border-radius: 5px;
+  //   font-size: 20px;
+  //   width: 250px;
+  //   margin: 400px 0px 0px 250px;
+
+  //   & h1 {
+  //     text-align: center;
+  //   }
+
+  //   & p {
+  //   }
+  // }
+
+  // &__description__body--5 {
+  //   background-color: #f9fafbb7;
+  //   border-radius: 5px;
+  //   position: absolute;
+  //   font-size: 20px;
+  //   width: 250px;
+  //   z-index: 15;
+  //   margin: 400px 0px 0px 750px;
+
+  //   & h1 {
+  //     text-align: center;
+  //   }
+
+  //   & p {
+  //   }
+  // }
+
+}
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////team
+
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  // &__trio {
+  //   margin-top: 0px 5px 0px 5px;
+  // }
+}
+
+
+
+// .robot3 {
+//   position: absolute;
+//   right: 50px;
+//   left: 150px;
+//   z-index: 0;
+// }
+// .robot4 {
+//   position: absolute;
+//   bottom: 250px;
+//   left: 900px;
+//   z-index: 0;
+// }
+// .robot5 {
+//   position: absolute;
+//   bottom: 50px;
+//   left: 180px;
+//   z-index: 0;
+// }
+// .sound {
+//   position: absolute;
+//   bottom: 350px;
+//   left: 400px;
+//   z-index: 0;
+// }
+// .sound4 {
+//   position: absolute;
+//   top: 300px;
+//   left: 600px;
+//   z-index: 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+.card {
+  // FOR THE FUNCTIONNALITY
+
+  perspective: 150rem; // the low the perspective the more the drama in the transition   [perspective helps in the good looking rotation of anything]
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 28rem; // we put it two times because it got lost and was rotating in another quadrant of col-1-of-3 due to the fixation of the positions
+  width: 28rem;
+  margin: 20px 0px 20px 0px ;
+
+  &__side {
+    font-size: 2rem;
+    height: 28rem;
+    width: 28rem;
+    transition: all 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden; //this time is to hide one card and show another, not fixing animation checking
+    border-radius: 0.3rem;
+    overflow: hidden; // this is to make the border radius work because the image go over
+
+
+    &--front {
+      background-color: #F3F4F6;
+      z-index: 1;
+    }
+
+    &--back {
+      background-color: green;
+      z-index: 0;
+
+      transform: rotateY(-180deg);
+
+      &-1 {
+        background-color: #F3F4F6;
+      }
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+
+    // FRONT SIDE STYLING
+
+    &__picture {
+      background-size: cover;
+      height: 23rem;
+  
+      background-blend-mode: screen; // thi is a new functionality it does not work for internet expore and other low browser
+  
+      &--1 {
+        background-image: url(../assets/digital1.jpeg);
+      }
+    }
+
+    &__heading {
+      font-size: 2.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: right;
+      color: white;
+      position: absolute;
+      top: 12rem;
+      right: 2rem;
+      width: 75%;
+    }
+  
+    // &__heading-span {
+    //   padding: 1rem 1.5rem;
+    //   -webkit-box-decoration-break: clone;
+    //   box-decoration-break: clone; // for th alignment of the text in the box (the sea being up, explorer down)
+  
+    //   &--1 {
+    //     background-image: linear-gradient(
+    //       to right bottom,
+    //       rgba(#ffb900, 0.85),
+    //       rgba(#ff7730, 0.85)
+    //     );
+    //   }
+    // }
+
+
+
+    &__details {
+      padding: 1.5rem;
+
+      &__title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 10px;
+      }
+    }
+  
+    // For the back
+  
+    &__cta {
+      // the cta stands for call for action
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      text-align: center;
+    }
+  
+    &__price-box {
+      text-align: center;
+      color: black;
+    }
+  
+    &__price-only {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: rgb(68, 68, 68);
+    }
+  
+    &__price-value {
+      font-size: 6rem;
+      font-weight: 100;
+    }
+  
+  
+  
+  
+  
+    // @include respond(tab-portrait) {
+      @media only screen and (max-width: 56.25em), only screen and (hover: none)   // this hover this is to specify that it has to follow the following criteria if the hoverability is inexistant
+      {
+      height: auto;
+      border-radius: 3rem;
+      background-color: white;
+      box-shadow: 0 1.5rem 4rem rgba(black, 0.15rem);
+  
+      &__side {
+        height: auto;
+        position: relative;
+        border-radius: 0.3rem;
+        box-shadow: none;
+  
+        // &--back {
+        //   transform: rotateY(0);
+        //   clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        // }
+      }
+  
+      &:hover &__side--front {
+        transform: rotateY(0);
+      }
+  
+      &__details {
+          padding: 1rem 3rem;
+      }
+  
+      // FRONT SIDE STYLING
+  
+      &__cta {
+        // the cta stands for call for action
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem;
+      }
+  
+      &__price-box {
+        margin-bottom: 3rem;
+      }
+  
+      &__price-value {
+        font-size: 4rem;
+      }
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////partners
+
+  .partner{
+    margin-top: 10px;
+    min-height: 40vh;
+
+      &__description {
+
+        &__slide-container {
+          width: 50%;
+          height: 50%;
+        }
+      }
+  
+  }
+
+
+  .react-slideshow-wrapper.slide {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.image-container-slide {
+  height: 200px;
+  width: 300px;
+  margin-left: 180px;
+}
+
+.partner__description__slide-container {
+  padding: 0% 26% 0% 18%;
+}
+
+.fade {
+  width: 650px;
+
+
+  // margin: 50px 0px 0px 280px;
+}
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////partners required by ali
+
+
+
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// body {
+//   display: block;
+//   width: 100%;
+//   height: 100vh;
+//   overflow: hidden;
+//   font-family: "Raleway", sans-serif;
+//   position: relative;
+//   background: #333;
+// }
+
+// .slider_title {
+//   font-size: 5vw;
+//   color: tomato;
+//   text-transform: uppercase;
+//   text-align: center;
+//   margin-bottom: 2vw;
+// }
+
+// .card-wrapper {
+//   position: relative;
+//   width: 100%;
+//   padding: 0 10px;
+//   -webkit-box-sizing: border-box;
+//           box-sizing: border-box;
+// }
+
+// .card-wrapper:active, .card-wrapper:hover, .card-wrapper:focus {
+//   outline: none;
+//   border: none;
+// }
+
+// .card {
+//   width: 100%;
+//   height: 450px;
+//   border-radius: 16px;
+//   overflow: hidden;
+//   cursor: pointer;
+//   position: relative;
+// }
+
+// .card .card-image {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 2;
+//   background-color: #000;
+//   -webkit-transition: .5s;
+//   transition: .5s;
+// }
+
+// .card .card-image img {
+//   width: 100%;
+//   height: 100%;
+//   -o-object-fit: cover;
+//      object-fit: cover;
+// }
+
+// .card:hover img {
+//   opacity: .4;
+//   -webkit-transition: .5s;
+//   transition: .5s;
+// }
+
+// .card:hover .card-image {
+//   -webkit-transform: translateY(-100px);
+//           transform: translateY(-100px);
+//   -webkit-transition: all .9s;
+//   transition: all .9s;
+// }
+
+// .social-icons {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   -webkit-transform: translate(-50%, -50%);
+//           transform: translate(-50%, -50%);
+//   z-index: 3;
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+// }
+
+// .social-icons li {
+//   list-style: none;
+// }
+
+// .social-icons li a {
+//   position: relative;
+//   display: block;
+//   width: 50px;
+//   height: 50px;
+//   line-height: 50px;
+//   text-align: center;
+//   background: #fff;
+//   font-size: 23px;
+//   color: #333;
+//   font-weight: bold;
+//   margin: 0 6px;
+//   -webkit-transition: .4s;
+//   transition: .4s;
+//   -webkit-transform: translateY(200px);
+//           transform: translateY(200px);
+//   opacity: 0;
+// }
+
+// .card:hover .social-icons li a {
+//   -webkit-transform: translateY(0px);
+//           transform: translateY(0px);
+//   opacity: 1;
+// }
+
+// .social-icons li a:hover {
+//   background: #000;
+//   -webkit-transition: .2s;
+//   transition: .2s;
+// }
+
+// .social-icons li a:hover .fa {
+//   color: #fff;
+// }
+
+// .social-icons li a .fa {
+//   -webkit-transition: .8s;
+//   transition: .8s;
+// }
+
+// .social-icons li a .fa:hover {
+//   -webkit-transform: rotateY(360deg);
+//           transform: rotateY(360deg);
+//   color: #fff;
+// }
+
+// .card:hover li:nth-child(1) a {
+//   -webkit-transition-delay: .1s;
+//           transition-delay: .1s;
+// }
+
+// .card:hover li:nth-child(2) a {
+//   -webkit-transition-delay: .2s;
+//           transition-delay: .2s;
+// }
+
+// .card:hover li:nth-child(3) a {
+//   -webkit-transition-delay: .3s;
+//           transition-delay: .3s;
+// }
+
+// .card:hover li:nth-child(4) a {
+//   -webkit-transition-delay: .4s;
+//           transition-delay: .4s;
+// }
+
+// .details {
+//   position: absolute;
+//   bottom: 400px;
+//   left: 0;
+//   background: #fff;
+//   width: 100%;
+//   height: 120px;
+//   z-index: 1;
+//   padding: 10px;
+//   -webkit-transition: .6s;
+//   transition: .6s;
+// }
+
+// .details h2 {
+//   margin: 30px 0;
+//   padding: 0;
+//   text-align: center;
+// }
+
+// .details h2 .job-title {
+//   font-size: 16px;
+//   line-height: 2;
+//   color: #333;
+//   font-weight: 300;
+//   display: block;
+// }
+
+// .card:hover .details {
+//   bottom: 0;
+// }
+
+// .carousel .slick-dots {
+//   bottom: -2.5vw;
+// }
+
+// .carousel .slick-dots li button {
+//   width: 20px;
+//   height: 20px;
+//   border: 1px solid #fff;
+//   border-radius: 20px;
+// }
+
+// .carousel .slick-dots li button:before {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   width: 10px;
+//   height: 10px;
+//   border-radius: 10px;
+//   content: "";
+//   text-align: center;
+//   opacity: .5;
+//   color: #000;
+//   background-color: #fff;
+//   -webkit-transform: translate(-50%, -50%);
+//           transform: translate(-50%, -50%);
+//   -webkit-transition: all .3s ease-in-out;
+//   transition: all .3s ease-in-out;
+// }
+
+// .carousel .slick-dots li.slick-active button, .carousel .slick-dots li:hover button {
+//   border-color: tomato;
+// }
+
+// .carousel .slick-dots li.slick-active button:before, .carousel .slick-dots li:hover button:before {
+//   background-color: tomato;
+//   opacity: 1;
+// }
+
+// .carousel .slick-prev, .carousel .slick-next {
+//   width: 50px;
+//   height: 50px;
+//   background-color: #fff;
+// }
+
+// .carousel .slick-prev:hover, .carousel .slick-prev:focus, .carousel .slick-next:hover, .carousel .slick-next:focus {
+//   color: #fff;
+//   outline: none;
+//   background: #fff;
+// }
+
+// .carousel .slick-prev:before, .carousel .slick-next:before {
+//   color: #000;
+//   font-family: "Raleway", sans-serif;
+// }
+
+// .carousel .slick-next {
+//   right: -55px;
+// }
+
+// .carousel .slick-prev {
+//   left: -55px;
+// }
+
+
+
+
+
+
+
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////contact
+
+  .contact {
+    min-height: 70vh;
+    background-image: linear-gradient(to left bottom, #70bedd, #0e9fd8c4);
+  }
+  
+
+
+  .contact {
+    background-image: linear-gradient(to left bottom, #70bedd, #0e9fd8c4);
+    background-size: cover;
+    background-repeat: none;
+    padding: 100px 0;
+    flex-wrap: wrap;
+    }
+
+.contact_form {
+        display: flex;
+        flex-direction: start;
+        justify-content: space-evenly;
+        text-align: center;
+        padding-left: 50px;
+        width: 85%;
+        padding-top: 1%;
+        margin: 0 auto;
+        color: white;
+        background-color: rgba(176, 218, 221, 0.6);
+        border-radius: 5px;
+        box-shadow: 1px 2px 3px rgb(102, 101, 101);
+    }
+
+.intro_title_contact{
+        font-weight: bold;
+        font-size: 50px;
+        }
+
+.contact_form .input_email {
+    width: 350px;
+    height: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    }
+
+.contact_form .input_message{
+    width: 350px;
+    height: 200px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    }
+
+.submit {
+    color:white;
+    background-color: green;
+    width: 70px;
+    height: 30px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.contact_picture {
+  width: 500px;
+  height: 300px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+/* .contact_form_one {
+    background-color: linear-ga;
+} */
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////the popup
+
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(black, .8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+  // -webkit-backdrop-filter: blur(10px);
+  // backdrop-filter: blur(10px);
+  // background-color: rgba(black, .2);
+
+  @supports (-webkit-backdrop-filter: blur(10px)) or (background-color: rgba(black, .2)){          //this is to make sure the other browser are supported  especially safari, but at the the time the other are staying the same;  we can give any cardinal number valu right after support, as long as the ones inside are right, and it still keep the property of design from the origin
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(black, .2);
+  }
+
+
+  // &__content {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //     width: 75%;
+  //     height: 75%;
+  //     background-color: white;
+  //     box-shadow: 0 2rem 4rem rgba(black, .2);
+  //     border-radius: .3rem;
+  //     display: table;      // we are using the display tables for not using the floating left on both of the children classes
+  //     overflow: hidden;
+  //     opacity: 0;
+  //     transform: translate(-50%, -50%) scale(.25);   // we took the transform from mixin because this was overwritting it
+  //     transition: all .4s .2s;    // the .2s is the delay;
+  // }
+
+
+  &:target {
+      opacity: 1;
+      visibility: visible;
+  }
+
+  &:target &__content {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__close {
+      &:link,
+      &:visited {
+          color: #777;
+          position: absolute;
+          top: 2.5rem;
+          right: 2.5rem;
+          font-size: 3rem;
+          text-decoration: none;
+          display: inline-block;
+          transition: all .2s;
+          line-height: 1;
+      }
+
+      &:hover {
+          color: #0e9fd8;
+      }
+  }
+}
+
+.popup__btn {
+  text-decoration: none;
+  color: #0e9fd8;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: .6s;
+
+  &:hover {
+    background-color: #0e9fd8;
+    color: white;
+    transform: scale(1.05) translateY(-.5rem);
+  }
+}
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////the deepspeech
+
+
+.view {
+    position: absolute;
+    top: 85%;
+    left: 85%;
+    transform: translate(10%, 10%);
+}
