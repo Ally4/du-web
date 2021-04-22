@@ -1,22 +1,22 @@
 export const menuItems = [
     {
-        title: 'HOME',
-        url: '#',
-        cName: 'nav-links'
+        jina: 'HOME',
+        njiya: '#',
+        cName: 'nali'
     },
     {
-        title: 'ABOUT US',
-        url: '#',
-        cName: 'nav-links'
+        jina: 'ABOUT US',
+        njiya: '#',
+        cName: 'nali'
     },
     {
-        title: 'PROJECTS',
-        url: '#',
-        cName: 'nav-links'
+        jina: 'PROJECTS',
+        njiya: '#',
+        cName: 'nali'
     },
     {
-        title: 'CONTACT US',
-        url: '#',
-        cName: 'nav-links'
+        jina: 'CONTACT US',
+        njiya: '#',
+        cName: 'nali'
     },
 ];

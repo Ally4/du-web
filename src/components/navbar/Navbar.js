@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { menuItems } from './MenuItems';
+import Logo from '../logo/logo'
 
 export default class Navbar extends Component {
 
@@ -13,13 +14,13 @@ export default class Navbar extends Component {
 
     render() {
         return (
-            <nav className="NavbarItems">
-                <h1 className="navbar-logo">React<i className="fab fa-react"></i></h1>
-                <div className="menu-icon" onClick={this.handleClick}><i className={this.state.clicked ? 'fa fa-wrench' : 'fa fa-twitter'}></i></div>
-                <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+            <nav className="Naviba">
+                <h1 className="nalo"><Logo /><i className="fab fa-react"></i></h1>
+                <div className="meni" onClick={this.handleClick}><i className={this.state.clicked ? 'fa fa-wrench' : 'fa fa-twitter'}></i></div>
+                <ul className={this.state.clicked ? 'name active' : 'name'}>
                 {menuItems.map((item, index) => {
                     return (
-                    <li key={index}><a className={item.cName} href={item.url}>{item.title}</a></li>
+                    <li key={index}><a className={item.cName} href={item.njiya}>{item.jina}</a></li>
                     )
                 })}
                 </ul>

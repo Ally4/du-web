@@ -504,7 +504,7 @@ import Index from './components/index';
 function App() {
   return (
     <div className="App">
-      <Index />
+      <Index className="y-scroll"/>
     </div>
   );
 }

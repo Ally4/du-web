@@ -109,8 +109,8 @@ export default class index extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 ml-auto mr-auto text-center">
-                <h6 className="text-muted">Our work</h6>
-                <h2 className="title">Some of Our Awesome Projects</h2>
+                <h2 className="text-muted">Our work</h2>
+                <h3 className="title">Our Awesome Projects</h3>
               {/* <ul className="nav nav-pills nav-pills-rose">
                 <li className="nav-item">
                   <a className="nav-link active" href="#pill1" data-toggle="tab">All</a>
@@ -185,8 +185,8 @@ export default class index extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 ml-auto mr-auto text-center">
-                <h6 className="text-muted">Our Team</h6>
-                <h2 className="title">The Core Team</h2>
+                <h2 className="text-muted">Our Team</h2>
+                <h3 className="title">The Core Team</h3>
               <h5 className="description">Only Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</h5>
             </div>
           </div>
